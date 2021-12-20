@@ -12,20 +12,20 @@ import java.util.Map;
 @RequestMapping("message")
 public class MessageController {
     private int counter = 5;
-    private List<Map<String, String>> messages = new ArrayList<Map<String, String>>() {{
-        add(new HashMap<String, String>() {{
+    private final List<Map<String, String>> messages = new ArrayList<>() {{
+        add(new HashMap<>() {{
             put("id", "1");
             put("text", "Иван Горшенин");
         }});
-        add(new HashMap<String, String>() {{
+        add(new HashMap<>() {{
             put("id", "2");
-            put("text", "Игорб Овчаренко");
+            put("text", "Игорь Овчаренко");
         }});
-        add(new HashMap<String, String>() {{
+        add(new HashMap<>() {{
             put("id", "3");
             put("text", "Александр Сычков");
         }});
-        add(new HashMap<String, String>() {{
+        add(new HashMap<>() {{
             put("id", "4");
             put("text", "Алексей Томинович");
         }});
