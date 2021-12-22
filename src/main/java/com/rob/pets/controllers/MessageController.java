@@ -12,7 +12,7 @@ import java.util.Map;
 @RequestMapping("message")
 public class MessageController {
     private int counter = 5;
-    private final List<Map< String, String>> messages = new ArrayList<>() {{
+    private final List<Map<String, String>> messages = new ArrayList<>() {{
         add(new HashMap<>() {{
             put("id", "1");
             put("text", "Иван Горшенин");
@@ -54,7 +54,7 @@ public class MessageController {
         message.put("id", String.valueOf(counter++));
         messages.add(message);
         return message;
-            }
+    }
 
     @DeleteMapping("{id}")
     public void delete(@PathVariable String id) {
@@ -65,7 +65,7 @@ public class MessageController {
     @PutMapping("{id}")
     public Map<String, String> update(@PathVariable String id,
                                       @RequestBody Map<String, String> message) {
-        Map<String, String> messageFromDb = getMessage(message.get("id"));
+        Map<String, String> messageFromDb = getMessage(id);
         messageFromDb.put("id", id);
         messageFromDb.putAll(message);
         return messageFromDb;
