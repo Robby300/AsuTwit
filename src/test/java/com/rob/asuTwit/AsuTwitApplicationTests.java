@@ -1,4 +1,4 @@
-package com.rob.pets;
+package com.rob.asuTwit;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

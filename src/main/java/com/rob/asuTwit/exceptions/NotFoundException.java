@@ -1,4 +1,4 @@
-package com.rob.pets.exceptions;
+package com.rob.asuTwit.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
